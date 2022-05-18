@@ -1,0 +1,25 @@
+.paper{
+    margin-top: -20px;
+    border-radius: 0;
+    padding: 30px 0;
+
+    p{
+        margin-bottom: 15px;
+        font-size: 18px;
+    }
+} 
+
+.title{
+    font-size: 36px!important;
+    font-weight: 500!important;
+    margin: 20px!important;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+
+    img{
+        width: 40px;
+        height: 40px;
+    }
+}
