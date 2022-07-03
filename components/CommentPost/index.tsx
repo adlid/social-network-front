@@ -29,7 +29,12 @@ export const CommentPost: React.FC<CommentPostProps> = ({
 			</Typography>
 			<Typography className="mt-10 mb-15">{text}</Typography>
 
-			<Menu id="simple-menu" elevation={3} keepMounted open={Boolean(false)}>
+			<Menu id="simple-menu"
+				  elevation={3}
+				  keepMounted
+				  open={Boolean(false)}
+
+			>
 				<MenuItem>Удалить</MenuItem>
 				<MenuItem>Редактировать</MenuItem>
 			</Menu>

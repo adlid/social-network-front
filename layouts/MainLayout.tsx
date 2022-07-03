@@ -7,21 +7,25 @@ import { SideComments } from "../components/SideComments";
 interface MainLayoutProps {
 	hideComments?: boolean;
 	contentFullWidth?: boolean;
+	hideMenu?:boolean
 	children?: any;
+	className?:string
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({
 	children,
 	contentFullWidth,
 	hideComments,
+	hideMenu,
+	className
 }) => {
 	return (
 		<>
 			<Header />
-			<div className="wrapper">
-				<div className="leftside">
+			<div className={clsx("wrapper", className)}>
+				{!hideMenu && <div className="leftSide">
 					<LeftMenu />
-				</div>
+				</div>}
 				<div className={clsx("content", { "content--full": contentFullWidth })}>
 					{children}
 				</div> 

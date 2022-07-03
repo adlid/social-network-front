@@ -1,6 +1,7 @@
 import React from "react";
-import { Paper, Typography } from "@mui/material";
-
+import {Button, Paper, Typography} from "@mui/material";
+import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
+import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
 import style from "./FullPost.module.scss";
 import { PostActions } from "../PostActions";
 
@@ -31,14 +32,25 @@ export default function FullPost() {
 						delectus nam repellendus amet nesciunt! Lorem, ipsum dolor sit amet
 						consectetur adipisicing elit.
 					</Typography>
-                    <div style={{width:500}}>
+                    <div style={{width:500, marginLeft:"-14px"}}>
                         <PostActions />
                     </div>
-                    <div className={"userInfo"}>
-                        <img style={{width:40, height:40}} src=""/>
-                        <b> Danial Sovetov</b>
-                        <span> +2031</span>
-                    </div>
+                    <div className={"d-flex justify-between align-center mt-30 mb-30"}>
+						<div className={style.userInfo}>
+							<img style={{width:40, height:40}} src=""/>
+							<b> Danial Sovetov</b>
+							<span> +2031</span>
+						</div>
+						<div >
+							<Button className={"mr-15"} variant={"contained"}>
+								<MessageOutlinedIcon/>
+							</Button>
+							<Button variant={"contained"}>
+								<PersonAddAltOutlinedIcon/>
+								<b className={"ml-10"}>Follow</b>
+							</Button>
+						</div>
+					</div>
 				</div>
 			</div>
 		</Paper>
